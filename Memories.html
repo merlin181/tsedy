@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Cherished Memories</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
+      background-image: url('https://picsum.photos/3000/2000?random=2');
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .card {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .icon-bar a {
+      transition: all 0.3s ease;
+    }
+
+    .icon-bar a:hover {
+      background-color: #e2e8f0;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-gray-800">Our Journey</h1>
+      <div class="space-x-4">
+        <a href="Passcode2.html" class="text-gray-600 hover:text-gray-800 transition duration-300">143 <i class="fas fa-heart"></i></a>
+        <a href="Index.html" class="text-gray-600 hover:text-gray-800 transition duration-300">Home <i class="fas fa-home"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center py-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white">
+    <h1 class="text-5xl font-bold mb-4">Our Cherished Memories</h1>
+    <p class="text-xl">A journey of love, laughter, and unforgettable moments</p>
+  </header>
+
+  <main class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Image 1 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="feet.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">I can't remember why I have this picture, but I have loved it since</p>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="bytree1.jpg" alt="By the tree" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">I believe I was playing football, and my number one fan was watching me</p>
+        </div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="firrst.jpg" alt="First picture" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">One of the first pictures I have of you, BEAUTIFUL AS ALWAYS</p>
+        </div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="studying.jpg" alt="Studying" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">You never really liked studying, but I love how hard you work and I am proud of you</p>
+        </div>
+      </div>
+
+      <!-- Video 1 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="studying.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="hideandseek.jpg" alt="Hide and seek" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">Being best friends with you, the best decision of my life</p>
+        </div>
+      </div>
+
+      <!-- Image 6 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="hostel1.jpg" alt="Hostel 1" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">I could not wait to see you</p>
+        </div>
+      </div>
+
+      <!-- Image 7 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="bears.jpg" alt="Bears" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">The first bear fever, i think</p>
+        </div>
+    </div>
+
+    <!--Image 8 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="together1.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">Everytime i come here, i am abused</p>
+        </div>
+    </div>
+     
+
+    <!--Image 9 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="wallpaper.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+          <p class="text-white text-center p-4">I think this is one of my favourite pictures</p>
+        </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="mercyhostel1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    <!-- Video 3 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="mercyhostel2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    <!--Image 9 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="hostel2.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">This picture always reminds me of the day i arrived at hostel</p>
+        </div>
+    </div>
+
+    <!--Image 10 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="bytree2.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">You probably going to hate me for this pictures up</p>
+        </div>
+    </div>
+
+     <!--Image 11 -->
+     <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel3.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">Moving here wasn't so bad after all</p>
+        </div>
+    </div>
+
+    <!--Image 12 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="photoday1.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">Exams were close, the pressure was high, but we had each other</p>
+        </div>
+    </div>
+
+    <!--Image 13 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel44.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">I dont even know what to say here, but i know i had to put it here</p>
+        </div>
+    </div>
+
+    <!--Image 14 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel5.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">From late nights, to early mornings we always motivated each other, and we always will</p>
+        </div>
+    </div>
+
+    <!--Image 15 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel6.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">You always found a way to make me smile, i am starting to believe there is witchcraft involved</p>
+        </div>
+    </div>
+
+    <!--Image 16 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel7.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">Got me doing things i didn't want to do, there really is witchcraft</p>
+        </div>
+    </div>
+
+    <!--Image 17 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel8.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">How did i allow you to take so many pics of me again?</p>
+        </div>
+    </div>
+
+    <!--Image 18 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="home1.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">Tough not being able to see you everyday </p>
+        </div>
+    </div>
+
+    <!--Image 19 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel9.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">The last day, we finally pulled through, but it was only the start</p>
+        </div>
+    </div>
+
+      <!-- Video 4 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="wits1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    <!--Image 20 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel10.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">One day</p>
+        </div>
+    </div>
+
+     <!--Image 21 -->
+     <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel11.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">The crusty studies</p>
+        </div>
+    </div>
+
+    <!-- Video 5 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="mercyhostel12.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+     <!--Image 22 -->
+     <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="mercyhostel13.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">You deserve to know, everyday, how BEAUTIFUL you are</p>
+        </div>
+    </div>
+
+      <!-- Video 6 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="home3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+     <!--Image 23 -->
+     <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <img src="meet.jpg" alt="Our feet" class="w-full h-64 object-cover">
+        <div class="overlay">
+        <p class="text-white text-center p-4">Being with you, brings joy to my heart</p>
+        </div>
+    </div>
+
+    <!-- Video 6 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="meet.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    <!-- Video 7 -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg" data-tilt data-tilt-max="10">
+        <video controls class="w-full h-64 object-cover">
+          <source src="moshoeshoe1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    </br>
+</br>
+
+<div class="mt-16 bg-white rounded-lg shadow-lg p-8">
+    <p class="text-lg leading-relaxed">
+      There is a lot I can display here, but I think it's best I keep it short. I wish I was there with you to celebrate your birthday, but I know I have to be patient, the time will come for us to be together. 
+      I want you to know that I am proud of you, of your hard work, of your commitment. I know it's not easy and it's only going to get tougher, so I need you to know that I'll always be
+      by your side, no matter what you need. There is nothing I wouldn't do for you and I hope you know that.
+    </p>
+    <p class="text-xl font-bold mt-6 text-center text-red-600">
+      Happy Birthday, My Love... We will be together soon ❤️
+    </p>
+  </div>
+</main>
+
+<footer class="bg-gray-800 text-white py-6 text-center">
+  <p>&copy; 2023 Our Love Story. Created with love for you.</p>
+</footer>
+</html>

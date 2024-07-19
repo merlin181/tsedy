@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #2c3e50;
+            background-image: url('https://picsum.photos/3000/2000?random=3');
+            background-attachment: fixed;
+            background-size: cover;
+            color: #ecf0f1;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .icon-bar a {
+            transition: all 0.3s ease;
+        }
+
+        .icon-bar a:hover {
+            background-color: #e74c3c;
+            color: #ecf0f1;
+        }
+
+        select, input[type="submit"] {
+            transition: all 0.3s ease;
+        }
+
+        select:hover, input[type="submit"]:hover {
+            transform: scale(1.05);
+        }
+
+        .drawing-container {
+            perspective: 1000px;
+        }
+
+        .drawing-image {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .drawing-container:hover .drawing-image {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white">Take a pick</h1>
+            <div class="icon-bar space-x-4">
+                <a href="Passcode.html" class="text-white hover:text-gray-200 transition duration-300">Memories <i class="fas fa-globe"></i></a>
+                <a href="Index.html" class="text-white hover:text-gray-200 transition duration-300">Home <i class="fas fa-home"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-6 py-12 flex flex-col items-center justify-center">
+        <form id="project-form" class="mb-12 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg p-8 shadow-xl" onsubmit="handleFormSubmission(event)">
+            <label for="project" class="block text-2xl mb-4">Choose a message:</label>
+            <div class="flex flex-col sm:flex-row items-center">
+                <select name="project" id="project" class="text-xl p-3 rounded-lg bg-white bg-opacity-50 text-gray-800 w-full sm:w-auto mb-4 sm:mb-0">
+                    <option value="select one">Select one</option>
+                    <option value="when-we-first-met">When we first met</option>
+                    <option value="time-spent-together">Time spent together</option>
+                    <option value="the-see-you-soon">THE See you soon</option>
+                </select>
+                <input type="submit" value="Go" class="bg-pink-500 hover:bg-pink-600 text-white text-xl font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 sm:ml-4 w-full sm:w-auto">
+            </div>
+        </form>
+
+        <div class="drawing-container w-full max-w-lg">
+            <img src="drawing.jpg" alt="Her amazing drawing" class="drawing-image w-full h-auto rounded-lg shadow-2xl">
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2023 Our Journey. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            const selectedProject = document.getElementById('project').value;
+
+            switch (selectedProject) {
+                case 'when-we-first-met':
+                    window.location.href = 'whenwefirstmet.html';
+                    break;
+                case 'time-spent-together':
+                    window.location.href = 'timespenttogether.html';s
+                    break;
+                case 'the-see-you-soon':
+                    window.location.href = 'theseeyousoon.html';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Animation for form appearance
+        gsap.from("#project-form", {duration: 1, y: 50, opacity: 0, ease: "power3.out"});
+
+        // Animation for drawing image
+        gsap.from(".drawing-container", {duration: 1, scale: 0.8, opacity: 0, delay: 0.5, ease: "back.out(1.7)"});
+    </script>
+</body>
+</html>
