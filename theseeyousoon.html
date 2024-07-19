@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Met</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
+      background-image: url('https://picsum.photos/3000/2000?random=2');
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+
+    .icon-bar a {
+      transition: all 0.3s ease;
+    }
+
+    .icon-bar a:hover {
+      background-color: #e2e8f0;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="space-x-4">
+        <a href="Index.html" class="text-gray-600 hover:text-gray-800 transition duration-300">
+          Home <i class="fas fa-home"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center py-12 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white">
+    <h1 class="text-5xl font-bold mb-4">The see you soon</h1>
+    <p>I wanted to make a lil something for you to watch and enjoy, its not much but i am hping it puts a smile on your face.
+      We will be together soon..
+    </p>
+  </header>
+
+  <main class="flex items-center justify-center min-h-screen">
+    <video controls width="1000" height="300">
+        <source src="seeyousoon.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2023 Our Love Story. Created with love for you.</p>
+  </footer>
+</body>
+</html>
